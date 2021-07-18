@@ -14,6 +14,8 @@ with open(dados, newline='', encoding='iso-8859-1') as arquivo:
     leitor = csv.reader(arquivo, delimiter=';')
     next(leitor) # pula a linha de cabeçalho
     for linha in leitor:
+        if not linha:
+            break # Se achar uma linha em branco, interrompe o processamento
         nome_clube = linha[1]
         media_publico = int(linha[2])
         if ano != None and linha[0] != ano:
@@ -29,8 +31,15 @@ clubes = dict(sorted(clubes.items(), key=lambda item: item[1], reverse=True))
 # Conta quantos clubes temos
 ticks = list(range(0, len(clubes)))
 
+# Prepara o nome do arquivo e título do gráfico
+titulo = 'Média de público nos estádios em ' + ano_legenda
+arquivo = 'average-attendance-'+ano_legenda+'.png'
+print('Gerando o gráfico: ' + titulo + '...')
+
 # Agora vamos gerar o gráfico
-plt.title('Média de público nos estádios em ' + ano_legenda)
+plt.title(titulo)
 plt.bar(ticks, clubes.values())
 plt.xticks(ticks, clubes.keys(), rotation='vertical')
-plt.savefig('average-attendance-'+ano_legenda+'.png', dpi=150, bbox_inches='tight')
+plt.savefig(arquivo, dpi=150, bbox_inches='tight')
+
+print('Gráfico gerado em ' + arquivo)
