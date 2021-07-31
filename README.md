@@ -34,7 +34,7 @@ O script gera uma imagem em `png` com o mesmo nome do script e com o sufixo do a
 Para gerar uma imagem Docker contendo os dados, o script, e já configurada para fazer a execução, basta executar o comando:
 
 ```bash
-$ docker image build -t <imagem>:<tag> -f Dockerfile.sample .
+$ docker image build -t <imagem>:<tag> .
 ```
 A `<imagem>` deve ser substituída pelo nome da imagem que será gerada.  
 A `<tag>` deve ser substituída pela tag da imagem que será gerada. Caso deseje, pode remover os dois pontos e a `<tag>` e o Docker usará a tag padrão (`latest`).  
