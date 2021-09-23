@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+authors:
+  - family-names: Rockenbach
+    given-names: "Dinei A."
+    affiliation: "Laboratory of Advanced Research on Cloud Computing (LARCC)"
+    orcid: "https://orcid.org/0000-0002-2091-9626"
+    alias: dineiar
+abstract: "Os códigos e dados presentes nesse repositório servem como material de apoio para o módulo 'Reprodução de Pesquisas com Docker' da Escola de Inverno em Computação realizada pelo Laboratório de Pesquisas Avançadas para Computação em Nuvem (LARCC) em 2021. Mais informações em . Os dados na pasta data são um dataset com dados sobre os times da série A do campeonato de futebol brasileiro (veja o README na pasta data). O script average-attendance.py usa esses dados para gerar um gráfico de média de público por time, com filtro opcional por ano."
+title: "Módulo 'Reprodução de Pesquisas com Docker' da Escola de Inverno em Computação 2021 do LARCC"
+message: "Se você usar esse software, por favor cite o trabalho usando estes metadados."
+license: LGPL-3.0
+identifiers:
+  - type: url
+    value: "https://larcc.setrem.com.br/escola-de-inverno-2021/"
+    description: "Site da Escola de Inverno de 2021 do LARCC"
+repository-code: "https://github.com/larcc-group/escola-inverno-2021-docker"
+date-released: "2021-07-30"
+references:
+  - authors:
+      - family-names: Czekster
+        given-names: "Ricardo M."
+    title: "Matches Brazilian Football from 2003 to 2020."
+    type: data
+    doi: 10.34740/KAGGLE/DSV/1978779
+    license: CC-BY-4.0
