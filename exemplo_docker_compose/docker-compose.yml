@@ -1,0 +1,23 @@
+services:
+  meu-site:
+    image: wordpress
+    environment:
+      - WORDPRESS_DB_HOST=banco
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_PASSWORD=senha123
+      - WORDPRESS_DB_NAME=banco_site
+    volumes:
+      - site-wordpress:/var/www/html
+    ports:
+      - 80:80
+  banco:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=senha123
+      - MYSQL_DATABASE=banco_site
+    volumes:
+      - arquivos-banco:/var/lib/mysql
+  
+volumes:
+  site-wordpress: 
+  arquivos-banco: 
